@@ -6,7 +6,7 @@ Dalam tugas ini saya membuat tampilan card berisi tiga lagu favorite saya
 Untuk tampilan card saya "terinspirasi" sama tampilan YTMusic hehe
 
 #-Fitur-#
--None
+-Play songs (Dibantu ChatGPT hehe)
 
 
 
