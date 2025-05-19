@@ -46,37 +46,37 @@ konten.innerHTML += card;
 
 
 // // Setelah semua card dimasukin
-// setTimeout(() => {
-//     const buttons = document.querySelectorAll('.buttonplay');
-//     const audios = document.querySelectorAll('.audioplay');
+setTimeout(() => {
+     const buttons = document.querySelectorAll('.buttonplay');
+     const audios = document.querySelectorAll('.audioplay');
 
-//     buttons.forEach((btn, index) => {
-//         btn.addEventListener('click', () => {
-//             const audio = audios[index];
+     buttons.forEach((btn, index) => {
+         btn.addEventListener('click', () => {
+             const audio = audios[index];
 
-//             // Pause semua audio kecuali yang diklik
-//             audios.forEach((a, i) => {
-//                 if (i !== index) {
-//                     a.pause();
-//                     a.currentTime = 0;
-//                     buttons[i].innerText = 'p';
-//                 }
-//             });
+             // Pause semua audio kecuali yang diklik
+             audios.forEach((a, i) => {
+                 if (i !== index) {
+                     a.pause();
+                     a.currentTime = 0;
+                     buttons[i].innerText = 'p';
+                 }
+             });
 
-//             // Toggle play/pause
-//             if (audio.paused) {
-//                 audio.play();
-//                 btn.innerHTML = 'p'; 
-//             } else {
-//                 audio.pause();
-//                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>';
-//             }
+             // Toggle play/pause
+             if (audio.paused) {
+                audio.play();
+                btn.innerHTML = 'p'; 
+            } else {
+                audio.pause();
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>';
+            }
 
-//             // Balikin tombol ke ▶️ pas lagu selesai otomatis
-//             audio.onended = () => {
-//                 btn.innerHTML = 'p';
-//             };
-//         });
-//     });
-// }, 100);
+            // Balikin tombol ke ▶️ pas lagu selesai otomatis
+            audio.onended = () => {
+                btn.innerHTML = 'p';
+            };
+        });
+    });
+}, 100);
 
